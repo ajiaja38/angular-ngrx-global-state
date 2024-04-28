@@ -9,11 +9,12 @@ import {
 } from '../../global/action/counter.action';
 import { AppState } from '../../global/app.state';
 import { selectCount } from '../../global/selector/counter.selector';
+import { InputMethodsComponent } from '../../components/input-methods/input-methods.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, InputMethodsComponent],
   template: `
     <div class="flex flex-col gap-4  justify-center items-center p-5">
       <h1 class="font-bold text-3xl">Current Count: {{ count$ | async }}</h1>
@@ -31,6 +32,7 @@ import { selectCount } from '../../global/selector/counter.selector';
           Reset Counter
         </button>
       </div>
+      <app-input-methods [callback]="increment.bind(this)" />
     </div>
   `,
 })

@@ -23,11 +23,11 @@ import { selectCount } from '../../global/selector/counter.selector';
           <p>{{ count$ | async }}</p>
         </div>
         <ul class="flex gap-3">
-          <li><a routerLink="/" routerLinkActive="text-gray-200">Home</a></li>
           <li>
-            <a routerLink="/setting" routerLinkActive="text-gray-200"
-              >Setting</a
-            >
+            <a routerLink="/" class="text-white">Home</a>
+          </li>
+          <li>
+            <a routerLink="/setting" class="text-white">Setting</a>
           </li>
         </ul>
       </div>
